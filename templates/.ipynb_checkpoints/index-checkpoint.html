@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Shortcut</title>
+</head>
+<body>
+    <h1>Upload your resume</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" accept=".txt,.docx,.pdf,.doc">
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
